@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Input</title>
+</head>
+<body>
+    <form id="otpForm">
+        <input type="text" id="otp" placeholder="Enter OTP" maxlength="6" autofocus>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('otp').addEventListener('input', function() {
+            if (this.value.length === 6) {
+                // Automatically submit the form
+                document.getElementById('otpForm').submit();
+            }
+        });
+    </script>
+</body>
+</html>
